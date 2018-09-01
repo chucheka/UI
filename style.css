@@ -1,0 +1,314 @@
+/* General STYLE*/
+:root {
+  --bg: #ccc;
+  --shadow: 0 1px 5px rgba(104, 104, 104, 0.8);
+  --light: #fff;
+  --dark: #333;
+  --danger: red;
+  --hover: #b03532;
+  --info: #fff;
+  --primary: rgb(31, 31, 95);
+  --textShadow: 0 1px 5x rgba(104, 104, 104, 0.8);
+}
+* {
+  box-sizing: border-box;
+}
+
+/* NAVBAR  STYLE*/
+.navbar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: var(--dark);
+}
+.navbar li {
+  float: left;
+}
+
+.navbar li:first-child {
+  background-color: #b03532 !important;
+}
+/* .navbar li :not(1) {
+  margin-left: 3000px;
+} */
+.navbar li a {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 14px 20px;
+  text-decoration: none;
+}
+.navbar li a:hover {
+  background-color: #111;
+}
+
+/* BACKGROUND STYLES */
+
+/* BACKGROUND SIGN UP AND ADMIN PAGES */
+.bg-sign-up {
+  background-image: url("/img.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-origin: content-box;
+  background-position: center, -50px;
+}
+
+/* Background Home */
+.bg-home {
+  background-image: url("/img.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-origin: content-box;
+  background-position: center, -50px;
+  min-height: 450px;
+}
+
+/* FOOTER STYLE */
+footer {
+  border-top: 2px solid olive;
+  text-align: center;
+  color: white;
+  height: 100px;
+  background: var(--dark);
+  padding: 2rem 0;
+  margin-top: 10px;
+  box-shadow: var(--shadow);
+}
+/* CARD STYLES */
+.card-home {
+  margin: 5px 25%;
+  width: 50%;
+  padding: 50px 0 0;
+  color: black;
+  text-align: center;
+  border: 1px none grey;
+  /* border-bottom-style: solid; */
+}
+
+.card-sign-up {
+  margin: 5px 25%;
+  width: 50%;
+  padding: 50px 0 0;
+  color: black;
+  text-align: center;
+  border: 1px none grey;
+  border-bottom-style: solid;
+}
+
+/* INPUTS FIELDS */
+input[type="text"],
+input[type="password"] {
+  background-color: #3cbc8d;
+  color: var(--light);
+  width: 80%;
+  padding: 12px 20px;
+  border: none;
+}
+/* BUTTON STYLE */
+.btn {
+  background: var(--dark);
+  color: var(--light);
+  width: 6.8rem;
+  height: 1.5rem;
+  padding: 0.2rem 1rem;
+  margin: 10px 1rem 10px 0;
+  text-align: center;
+  text-decoration: none;
+  box-shadow: var(--shadow);
+  border-radius: 4px;
+}
+
+.btn:hover {
+  background-color: var(--hover);
+}
+
+/* END OF GENERAL STYLE */
+
+/* ORDER PAGE */
+
+/* Showcase area */
+.showcase {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-gap: 5px;
+  margin: 10px 0;
+}
+.menu {
+  display: grid;
+  grid-template-rows: repeat(4, 1fr);
+  grid-gap: 5px;
+  /* height: 760px; */
+}
+.box {
+  display: grid;
+  grid-template-areas:
+    "image description price"
+    "image quantity add-cart";
+  background-color: var(--bg);
+  box-shadow: var(--shadow);
+}
+
+img {
+  display: grid;
+  display: inline-block;
+  grid-area: image;
+  width: 200px;
+  height: 150px;
+  padding: 4px 0 4px 0;
+  border-radius: 4px;
+  justify-items: center;
+}
+.description {
+  display: grid;
+  grid-area: description;
+  padding-left: 0;
+}
+input[type="number"] {
+  display: grid;
+  display: inline-block;
+  grid-area: quantity;
+  width: 80px;
+  height: 2em;
+  box-shadow: var(--shadow);
+  outline: none;
+  background-color: ghostwhite;
+}
+.btn {
+  display: grid;
+  display: inline-block;
+  grid-area: add-cart;
+}
+
+.price {
+  display: grid;
+  display: inline-block;
+  grid-area: price;
+  margin-top: 15px;
+  align-items: end;
+  padding-left: 10%;
+  color: var(--primary);
+  font-size: 28px;
+  font-style: italic;
+  text-shadow: var(--textShadow);
+}
+
+.info {
+  display: grid;
+  grid-template-rows: 360px 450px;
+  grid-gap: 6px;
+}
+.categories {
+  text-align: center;
+  height: auto;
+  background-color: var(--bg);
+}
+.categories ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0 auto 5px;
+  width: 100%;
+  background-color: var(--bg);
+}
+
+.categories li a {
+  display: block;
+  color: #000;
+  padding: 8px 0;
+  text-decoration: none;
+  box-shadow: var(--shadow);
+  margin-top: 10px;
+  width: 80%;
+  text-align: center;
+}
+.categories li a:hover {
+  background-color: var(--hover);
+}
+
+/* Change the link color on hover */
+.categories li a:hover {
+  background-color: #555;
+  color: white;
+}
+
+.cart {
+  background-color: var(--bg);
+}
+
+.cart > h2 {
+  padding-left: 20px;
+}
+/* END OF ORDER PAGE STYLES*/
+
+/* BEGINNING OF ADMIN PAGE STYLE */
+.container {
+  margin: 4px 1% auto;
+  display: grid;
+  grid-template-rows: 100px auto;
+}
+
+.headline {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  justify-content: center;
+  /* border-bottom: 2px #666 solid; */
+  padding: 10px 10px;
+  color: var(--light);
+}
+
+.orderdiv {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  background-color: var(--bg);
+  height: 200px;
+  box-shadow: var(--shadow);
+  align-content: center;
+  /* color: var(--light); */
+  margin-top: 10px;
+}
+.one {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  widows: 100%;
+  height: 100%;
+}
+.state {
+  display: inline-block;
+  padding: 36% 0 0;
+}
+.shift {
+  margin: 40% 2px 0px 2px !important;
+}
+
+a[class~="decline"] {
+  background: var(--danger) !important;
+}
+a[class~="decline"]:hover {
+  background: var(--dark) !important;
+}
+/* END OF ADMIN PAGE STYLE */
+#sign-up {
+  color: rgb(255, 120, 35);
+  text-decoration: underline;
+}
+.views {
+  display: grid;
+  grid-template-rows: 2fr 1fr;
+  justify-content: center;
+  justify-items: stretch;
+}
+.orderCard {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: stretch;
+}
+
+@media screen and (max-width: 540px) {
+  .categories li a {
+    width: 120px;
+  }
+}
+@media screen and (max-width: 790px) {
+}
