@@ -324,6 +324,19 @@ a[class~="decline"]:hover {
   grid-template-columns: 1fr 1fr;
   justify-content: stretch;
 }
+#checkout {
+  display: grid;
+  grid-template-areas: " one two";
+  /* align-content: start; */
+}
+.one-1 {
+  display: grid;
+  grid-area: two;
+}
+.two-1 {
+  display: grid;
+  grid-area: one;
+}
 
 @media screen and (max-width: 540px) {
   .categories li a {
@@ -380,3 +393,8 @@ a[class~="decline"]:hover {
     height: 300px;
   }
 }
+/* @media screen and (max-width: 350px) {
+  .navbar li {
+    float: none;
+  }
+} */
