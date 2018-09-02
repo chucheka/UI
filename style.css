@@ -114,7 +114,7 @@ input[type="password"] {
   width: 6.8rem;
   height: 1.5rem;
   padding: 0.2rem 1rem;
-  margin: 10px 1rem 10px 0;
+  margin: 10px 0.8rem 10px 0;
   text-align: center;
   text-decoration: none;
   box-shadow: var(--shadow);
@@ -246,7 +246,7 @@ input[type="number"] {
 .container {
   margin: 4px 1% auto;
   display: grid;
-  grid-template-rows: 100px auto;
+  grid-template-rows: 50px auto;
 }
 
 .headline {
@@ -270,17 +270,37 @@ input[type="number"] {
 }
 .one {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  widows: 100%;
-  height: 100%;
+  grid-template-areas: "img shift decline accept";
+  align-content: center;
+  padding: 0 2px;
+  /* widows:  100%;
+  height: 100%; */
+}
+.ordering {
+  display: grid;
+  grid-area: img;
+}
+.specs {
+  display: grid;
+  grid-area: shift;
+}
+.accept {
+  display: grid;
+  grid-area: accept;
+  margin-top: 40%;
+}
+.decline {
+  display: grid;
+  grid-area: decline;
+  margin-top: 40%;
 }
 .state {
   display: inline-block;
-  padding: 36% 0 0;
+  padding: 25% 0 0;
 }
-.shift {
+/* .shift {
   margin: 40% 2px 0px 2px !important;
-}
+} */
 
 a[class~="decline"] {
   background: var(--danger) !important;
@@ -330,5 +350,33 @@ a[class~="decline"]:hover {
   .price {
     margin: 30% 0;
     text-align: center;
+  }
+  img {
+    width: 220px;
+  }
+  .one {
+    display: grid;
+    grid-template-areas:
+      "img shift"
+      "decline accept";
+  }
+  .ordering {
+    display: grid;
+    grid-area: img;
+  }
+  .specs {
+    display: grid;
+    grid-area: shift;
+  }
+  .accept {
+    display: grid;
+    grid-area: accept;
+  }
+  .decline {
+    display: grid;
+    grid-area: decline;
+  }
+  .orderdiv {
+    height: 300px;
   }
 }
